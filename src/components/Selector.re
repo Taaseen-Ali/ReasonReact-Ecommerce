@@ -34,11 +34,12 @@ let make = (~item) => {
            )
          ->React.array}
       </Slider>
-      <div className="flex flex-col absolute top-0 md:relative md:flex-row">
+      <div
+        className="flex flex-col absolute top-0 w-1/4 md:w-full md:relative md:flex-row md:border-t-4 md:border-black md:rounded-sm">
         {item.images
          ->Belt.Array.mapWithIndex((i, image) => {
-             <Dot className="m-0 w-1/4" key={i->string_of_int} slide=i>
-               <Card className="w-full" onClick={_ => Js.log("hi")}>
+             <Dot className="m-0 w-full" key={i->string_of_int} slide=i>
+               <Card className="" onClick={_ => Js.log("hi")}>
                  <img src={image.src} />
                </Card>
              </Dot>

@@ -1,6 +1,6 @@
 let str = React.string;
 [@bs.module] external cartImg: string = "../assets/images/cart.png";
-
+[@bs.val] external publicUrl: string = "process.env.PUBLIC_URL";
 open ShopifyBuy.Types_;
 open ShopifyBuy.Utils;
 
@@ -9,7 +9,9 @@ type state = {isOpen: bool};
 [@react.component]
 let make = () => {
   open ShopContext.Actions;
+
   let url = ReasonReactRouter.useUrl();
+
   let (cart, setCart) = React.useState(_ => [||]);
   let (checkoutLink, setCheckoutLink) = React.useState(_ => None);
   let updateCart = () => {
