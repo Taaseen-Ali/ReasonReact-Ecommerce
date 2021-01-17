@@ -1,6 +1,6 @@
-# Tailwind Starter
+# ReasonReact Eccommerce
 
-A starter porject to play around with reason-react and tailwind
+A fully featured ecommerce website built using ReasonML, React, and Shopify.
 
 ## Run Project
 
